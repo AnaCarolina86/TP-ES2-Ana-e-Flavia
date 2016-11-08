@@ -18,18 +18,32 @@ O Quill Rich Text Editor vem sendo desenvolvido há aproximadamente dois anos co
 O Quill Rich Text Editor é um editor de texto que foi construído para possuir grande compatibilidade com os sistemas operacionais mais atuais (Windows, Linux, Android, por exemplo) e com vários navegadores (Edge, Chrome, Firefox) , além disso ele pode ser facilmente adaptado a inclusões e alterações de requisitos. O objetivo desse aplicativo é ser uma alternativa para os editores de texto existentes até a presente data, e que seja de livre acesso aos usuários, possuindo constante colaboração de voluntários no seu desenvolvimento. 
 É possível fazer o download do Quill em vários formatos, de forma que o usuário possa  usar a aplicação prontamente, também o código fonte completo é disponibilizado para fazer o download. Para fazer o download do Quill e/ou do código fonte basta acessar https://github.com/quilljs/quill ou o website do produto https://quilljs.com/docs/download/ . Uma Rede de Fornecimento de Conteúdo (CDN) está disponível e possui o suporte da Amazon CloudFront, uma outra opção é adicionar o Quill como uma dependência NPM e adicioná-lo no próprio fluxo de trabalho de compilação.  
 O sistema possui uma barra de ferramentas que auxilia os usuários a formatarem o texto muito similar aos editores de texto comuns, como o Word e o Open Office, apresentando as opções para estilizar a fonte, como tipo, tamanho, negrito, itálico, sublinhado, cortado, cor, cor de preenchimento, lista numerada, lista com marcadores, alinhamento do parágrafo, inserção de links e imagens externos. 
-Foram utilizadas principalmente as linguagens de programação Java e JavaScript para desenvolver este aplicativo. Este sistema foi criado por  Jason Chen, membro do programa de desenvolvedores, ele possui 53 estrelas e 94 seguidores no GitHub, além de possuir 9 repositórios. Um dos principais colaboradores é o Byron Milligan que possui 54 estrelas, 7 seguidores e 3 repositórios no GitHub. Não existe uma divisão clara de tarefas, mas é certo que o Jason é o desenvolvedor que realiza mais alterações no quill, de acordo com o número de commits realizados por ele dentro de um mês, como pode ser observado na imagem logo abaixo.  
-![quantidade de commits](/master/commits.jpg)  
+Foram utilizadas principalmente as linguagens de programação Java e JavaScript para desenvolver este aplicativo. Este sistema foi criado por  Jason Chen, membro do programa de desenvolvedores, ele possui 53 estrelas e 94 seguidores no GitHub, além de possuir 9 repositórios. Um dos principais colaboradores é o Byron Milligan que possui 54 estrelas, 7 seguidores e 3 repositórios no GitHub. Não existe uma divisão clara de tarefas, mas é certo que o Jason é o desenvolvedor que realiza mais alterações no quill, de acordo com o número de commits realizados por ele dentro de um mês, como pode ser observado na imagem logo abaixo. 
 
-Desde o surgimento da Web, a criação de conteúdo tornou-se imprescindível  uma boa edição de textos, e a proposta desse sistema é trazer soluções práticas para isso. O Quill foi construído baseado em texto natural, então quando ele quer saber se algo está em negrito, ele não precisa atravessar o DOM, basta chamar getFormat(5,1). Isso é possível porque  todas as chamadas de API do núcleo permitem índices arbitrários e comprimentos de acesso ou modificação. O evento API também relata alterações em um formato JSON intuitivo, dessa forma não há necessidade de analisar o DOM. Como o ambiente web está se tornando cada vez mais rica e interativa, os editores de textos necessitam considerar esses casos de uso. Além disso, esse sistema suporta um número ilimitado de formatos de textos, e  expõe seu próprio modelo de documento, uma abstração poderosa sobre o DOM, permitindo a ampliação e personalização da edição. Vale destacar que essa aplicação permite que funcionalidades executem da mesma maneira nos diversos sistemas operacionais e navegadores.
+![quantidade de commits](https://github.com/AnaCarolina86/TP-ES2-Ana-e-Flavia/blob/master/commits.jpg)  
+Fonte: https://github.com/quilljs/quill/graphs/contributors
 
-Rich text
+Desde o surgimento da Web, a criação de conteúdo tornou-se imprescindível  uma boa edição de textos, e a proposta desse sistema é trazer soluções práticas para isso. O Quill foi construído baseado em texto natural, então quando ele quer saber se algo está em negrito, ele não precisa atravessar o DOM, basta chamar o método getFormat(5,1) que recupera formatação comum de texto no intervalo dado. Métodos:
+* getFormat(range: Range = current): { [String]: any }  
+* getFormat(index: Number, length: Number = 0): { [String]: any }  
+
+Exemplo de uso:
+
+> quill.setText('Hello World!');  
+> quill.formatText(0, 2, 'bold', true);  
+> quill.formatText(1, 2, 'italic', true);  
+> quill.getFormat(0, 2);   // { bold: true }  
+> quill.getFormat(1, 1);   // { bold: true, italic: true }  
+
+Isso é possível porque  todas as chamadas de API do núcleo permitem índices arbitrários e comprimentos de acesso ou modificação. O evento API também relata alterações em um formato JSON intuitivo, dessa forma não há necessidade de analisar o DOM. Como o ambiente web está se tornando cada vez mais rica e interativa, os editores de textos necessitam considerar esses casos de uso. Além disso, esse sistema suporta um número ilimitado de formatos de textos, e  expõe seu próprio modelo de documento, uma abstração poderosa sobre o DOM, permitindo a ampliação e personalização da edição. Vale destacar que essa aplicação permite que funcionalidades executem da mesma maneira nos diversos sistemas operacionais e navegadores.
+
+## Rich text
 
 O Rich Text Format (RTF), como o próprio nome sugere, é um formato de texto mais elaborado e que permite transmitir ao trabalho características mais variadas e únicas, ao contrário do Plain Text, o texto simples de arquivos de extensão .txt, que não possui nenhuma opção de formatação além da tradicional. 
 A preocupação com a variedades de formatação surgiu na década de 80 por membros do time de desenvolvimento da Microsoft e desde então vem sofrendo melhorias no sentido de incluir cada vez mais funcionalidades aos editores de texto.
 O Quill possui sua própria biblioteca de rich text, que possui trê módulos básicos: o delta.js, o op.js 	e o type.js. Os “ops” são os array de operações e os “deltas” são objetos com chaves “ops” para um array de operações.
 
-Funcionalidades
+## Funcionalidades
 
 Esta aplicação é capaz de editar um texto de formas variadas e únicas por um usuário comum, de forma simples e bastante familiar a este. Entre as mais novas funcionalidades do Quill podemos citar: blocos editáveis podem existir em linha com o restante do texto, fórmulas em LaTex podem ser inseridas no seu conteúdo, também muitos novos formatos foram adicionados, incluindo sobrescrito, subscrito, código inline, blocos de código, cabeçalhos, blockquotes, direção de texto, vídeos e listas aninhadas, estilos inline agora também podem usar as classes.
 Além dessas funcionalidades, existem as básicas de um editor de texto, como a alteração de cor, tamanho e estilo do texto, alinhamento do texto, inserção de imagens e hiperlinks,  que podem ser observadas na imagem logo abaixo.
