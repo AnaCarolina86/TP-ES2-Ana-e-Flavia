@@ -8,12 +8,12 @@ Flávia Mendes O. Abreu
 
 https://github.com/quilljs/quill
 
-Resumo
+## Resumo
 
-O Quill Rich Text Editor vem sendo desenvolvido há dois anos com o objetivo de ser um editor de fácil uso e o melhor de sua classe de forma a se tornar o mais utilizado em aplicações web. O programa possui sua própria API de código aberto e disponível no GitHub para avaliações e novos colaboradores. Pode-se afirmar também ele se destina a usuários com experiência intermediária em web.
+O Quill Rich Text Editor vem sendo desenvolvido há aproximadamente dois anos com o objetivo de ser um editor de texto de fácil uso e o melhor de sua classe de forma a se tornar o mais utilizado em aplicações web. O programa possui a sua própria API de código aberto e disponível no GitHub para avaliações e possíveis novos colaboradores. Pode-se afirmar também que ele se destina a usuários com experiência intermediária em web.
 
 
-Introdução
+## Introdução
 
 O Quill Rich Text Editor é um editor de texto que foi construído para possuir grande compatibilidade com os sistemas operacionais mais atuais (Windows, Linux, Android, por exemplo) e com vários navegadores (Edge, Chrome, Firefox) , além disso ele pode ser facilmente adaptado a inclusões e alterações de requisitos. O objetivo desse aplicativo é ser uma alternativa para os editores de texto existentes até a presente data, e que seja de livre acesso aos usuários, possuindo constante colaboração de voluntários no seu desenvolvimento. 
 É possível fazer o download do Quill em vários formatos, de forma que o usuário possa  usar a aplicação prontamente, também o código completo é disponibilizado para fazer o download.
