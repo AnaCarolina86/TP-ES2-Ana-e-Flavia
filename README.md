@@ -71,6 +71,9 @@ A versão 0.20.0 trouxe como principais mudanças correções relativas à usabi
 A edição seguinte, a 0.20.1, foi uma versão pré-beta na qual foram lançados mais correções de bugs e com a integração do modelo de documento “Parchment” ao Quill. A próxima versão a esta, foi a primeira versão beta, sem mudanças significativas.
 A fase beta do Quill obteve 12 versões lançadas, até que surgisse a versão rc (release candidate). Essa fase prevaleceu por um período de aproximadamente um ano e foi responsável pelo aperfeiçoamento da API de teclado e sua customização. Foram adicionados também utilidades como ferramentas de inserção de fórmulas e videos, assim como a ferramenta de imagens foi melhorada para obter melhor desempenho.
 Após 5 versões rc sem muitas alterações significativas, o Quill foi oficialmente lançado e se encontra atualmente na versão 1.0.6.
+Evolução:
+
+![evolucao](https://github.com/AnaCarolina86/TP-ES2-Ana-e-Flavia/blob/master/evolucao.jpg)
 
 Características do produto
 
