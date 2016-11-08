@@ -74,6 +74,7 @@ Após 5 versões rc sem muitas alterações significativas, o Quill foi oficialm
 Evolução:
 
 ![evolucao](https://github.com/AnaCarolina86/TP-ES2-Ana-e-Flavia/blob/master/evolucao.jpg)
+Fonte: https://github.com/quilljs/quill/graphs/code-frequency
 
 Características do produto
 
